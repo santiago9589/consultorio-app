@@ -1,33 +1,33 @@
 import Express, { Request, Response } from "express"
 import { succesResponse, failResponse } from "../../main/response"
-import { updatePacient,getPacient, getPacients } from "./controller"
+import { getSpeciality,getSpecialitys,updateSpeciality } from "./controller"
 
-export const pacientsRoutes = Express.Router()
+export const specialityRoutes = Express.Router()
 
 
-pacientsRoutes.put("/:id", async (req: Request, res: Response) => {
+specialityRoutes.put("/:id", async (req: Request, res: Response) => {
 
     const id = req.params.id
-    const {email,name} = req.body
+    const {doctorName} = req.body
 
-    if (!name || !email) {
+    if (!id || !doctorName) {
         failResponse(req, res, "datos invalidos", 400)
     }
 
     try {
-        const response = await updatePacient(id,name,email) 
+        const response = await updateSpeciality(id,doctorName) 
         succesResponse(req, res, response, 200)
     } catch (error) {
         failResponse(req, res, error.message, 400)
     }
 })
 
-pacientsRoutes.get("/:id", async (req: Request, res: Response) => {
+specialityRoutes.get("/:id", async (req: Request, res: Response) => {
 
     const id = req.params.id
 
     try {
-        const response = await getPacient(id)
+        const response = await getSpeciality(id)
         succesResponse(req, res, response, 200)
     } catch (error) {
         failResponse(req, res, error.message, 400)
@@ -35,10 +35,10 @@ pacientsRoutes.get("/:id", async (req: Request, res: Response) => {
 })
 
 
-pacientsRoutes.get("/", async (req: Request, res: Response) => {
+specialityRoutes.get("/", async (req: Request, res: Response) => {
 
     try {
-        const response = await getPacients()
+        const response = await getSpecialitys()
         succesResponse(req, res, response, 200)
     } catch (error) {
         failResponse(req, res, error.message, 400)

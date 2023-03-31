@@ -1,20 +1,24 @@
 import { modelPacients } from "./model"
 
-export const addPacients = async (name: string, email: string, password: string) => {
 
-    if (!name || !email || !password) {
-        throw new Error("Datos invalidos")
-    }
+export const getPacient = async (id:string) => {
 
     try {
-        const response = await modelPacients.create({
+        const response = await modelPacients.findById(id).populate("appointment")
+        return response
+
+    } catch (error) {
+        return error
+    }
+}
+
+export const updatePacient = async (id:string ,name:string,email:string) => {
+
+    try {
+        const response = await modelPacients.findByIdAndUpdate(id,{
             name,
-            email,
-            password
+            email
         })
-
-        await response.save()
-
         return response
 
     } catch (error) {
@@ -25,18 +29,7 @@ export const addPacients = async (name: string, email: string, password: string)
 export const getPacients = async () => {
 
     try {
-        const response = await modelPacients.find().populate("consultas")
-        return response
-
-    } catch (error) {
-        return error
-    }
-}
-
-export const deletePacient = async (id:string) => {
-
-    try {
-        const response = await modelPacients.findByIdAndDelete(id)
+        const response = await modelPacients.find().populate("appointment")
         return response
 
     } catch (error) {

@@ -6,18 +6,13 @@ const newModel = new Schema({
         type: String,
         require: true
     },
-    consultas: [
-        { type: Schema.Types.ObjectId, ref: "Consulta" }
+    appointment: [
+        { type: Schema.Types.ObjectId, ref: "Appointment" }
     ],
     email: {
         type: String,
         require: true
-    },
-    password: {
-        type: String,
-        require: true
-    },
-
+    }
 })
 
 export const modelPacients = model("Pacients", newModel)
