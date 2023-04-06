@@ -2,9 +2,9 @@ import React from "react"
 
 const FooterComponent = () => {
     return (
-        <>
-        FooterComponent
-        </>
+        <footer className="border-2 border-red-500">
+            footer
+        </footer>
     )
 }
 

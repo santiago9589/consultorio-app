@@ -8,13 +8,14 @@ interface props {
 
 const LayoutComponent = ({ children }: props) => {
     return (
-        <main>
-            <Navbar />
+        <>
+            
             <>
                 {children}
             </>
-            <FooterComponent />
-        </main>
+            
+        </>
+
     )
 }
 

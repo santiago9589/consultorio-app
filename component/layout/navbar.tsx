@@ -2,9 +2,9 @@ import React from "react"
 
 const Navbar = () => {
     return (
-        <>
-        navbar
-        </>
+        <nav className="border-2 border-red-500 col-span-5">
+            SSADFDS
+        </nav>
     )
 }
 
