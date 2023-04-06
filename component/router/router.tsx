@@ -1,6 +1,6 @@
 import React from "react"
 import { createBrowserRouter} from "react-router-dom"
-import ContactPage from "../../src/contact"
+import ServicesPage from "../../src/servicios"
 import HomePage from "../../src/App"
 
 export const router = createBrowserRouter([
@@ -9,7 +9,7 @@ export const router = createBrowserRouter([
         element:<HomePage/>
     },
     {
-        path:"/contact",
-        element:<ContactPage/>
+        path:"/servicios",
+        element:<ServicesPage/>
     }
 ])
