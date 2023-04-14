@@ -35,7 +35,7 @@ const WhoAreWePage = () => {
   }]
 
   return (
-    <section className='shadow-lg shadow-lg  p-2 gap-2 col-start-2 col-span-4 row-span-4  lg:col-span-6   justify-between lg:row-span-4 flex  items-start flex-wrap overflow-y-auto'>
+    <section className='shadow-lg  p-2 gap-2 col-start-2 col-span-4 row-span-4  lg:col-span-6   justify-between lg:row-span-4 flex  items-start flex-wrap overflow-y-auto'>
 
       {arrayInfo.map((info) => {
         return (
