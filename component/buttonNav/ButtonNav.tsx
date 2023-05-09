@@ -1,14 +1,13 @@
-import React from 'react'
+import React from "react"
 
 interface props {
-  route: string
-  funcionPath: (url: string) => void
+  name: string
 }
 
-const ButtonNav = ({ route,funcionPath }: props) => {
+const ButtonNav = ({ name}: props) => {
   return (
-    <button onClick={()=>funcionPath }className='border-2 border-blue-100 rounded-lg p-2 capitalize bg-blue-200 lg:text-lg md:text-xs'>
-      {route}
+    <button className="border-2 border-blue-100 rounded-lg p-2 capitalize bg-blue-200 lg:text-lg md:text-xs">
+      {name}
     </button>
   )
 }

@@ -1,5 +1,5 @@
-import React from 'react'
-import { useFormik } from 'formik'
+import React from "react"
+import { useFormik } from "formik"
 import * as Yup from "yup";
 import FormComponent from "../component/form/FormComponent"
 import InputComponent from "../component/input/InputComponent"
@@ -19,7 +19,7 @@ const initValues: contactProps = {
 
 
 
-const ContactsUs = () => {
+const ContactsUsPage = () => {
 
     const validationSchema = Yup.object().shape({
         email: Yup.string().required(),
@@ -42,8 +42,8 @@ const ContactsUs = () => {
     return (
         <FormComponent handleSubmit={handleSubmit}>
             <InputComponent
-                type='text'
-                placeholder='ingresar name'
+                type="text"
+                placeholder="ingresar name"
                 name="name"
                 handleChange={handleChange}
                 value={values.name}
@@ -51,8 +51,8 @@ const ContactsUs = () => {
                 touched={touched.name!}
             />
              <InputComponent
-                type='text'
-                placeholder='ingresar email'
+                type="text"
+                placeholder="ingresar email"
                 name="email"
                 handleChange={handleChange}
                 value={values.email}
@@ -60,8 +60,8 @@ const ContactsUs = () => {
                 touched={touched.email!}
             />
             <InputComponent
-                type='text'
-                placeholder='ingresar numero telefono'
+                type="text"
+                placeholder="ingresar numero telefono"
                 name="cellNumber"
                 handleChange={handleChange}
                 value={values.cellNumber}
@@ -73,4 +73,4 @@ const ContactsUs = () => {
     )
 }
 
-export default ContactsUs
+export default ContactsUsPage
