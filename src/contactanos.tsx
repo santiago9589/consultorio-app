@@ -45,7 +45,7 @@ const ContactsUsPage = () => {
                 type="text"
                 placeholder="ingresar name"
                 name="name"
-                handleChange={handleChange}
+                onChange={handleChange}
                 value={values.name}
                 error={errors.name!}
                 touched={touched.name!}
@@ -54,7 +54,7 @@ const ContactsUsPage = () => {
                 type="text"
                 placeholder="ingresar email"
                 name="email"
-                handleChange={handleChange}
+                onChange={handleChange}
                 value={values.email}
                 error={errors.email!}
                 touched={touched.email!}
@@ -63,11 +63,12 @@ const ContactsUsPage = () => {
                 type="text"
                 placeholder="ingresar numero telefono"
                 name="cellNumber"
-                handleChange={handleChange}
+                onChange={handleChange}
                 value={values.cellNumber}
                 error={errors.cellNumber!}
                 touched={touched.cellNumber!}
             />
+            <button type="submit" className="bg-blue-300 rounded-lg p-2">Enviar</button>
 
         </FormComponent>
     )

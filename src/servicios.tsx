@@ -29,29 +29,6 @@ const ServiciosPage = () => {
   {
     title: "Cardiologia",
     imagen: cardiologia
-  },
-  {
-    title: "Cardiologia",
-    imagen: cardiologia
-  },
-  {
-    title: "Cardiologia",
-    imagen: cardiologia
-  },{
-    title: "Cardiologia",
-    imagen: cardiologia
-  },{
-    title: "Cardiologia",
-    imagen: cardiologia
-  },{
-    title: "Cardiologia",
-    imagen: cardiologia
-  },{
-    title: "Cardiologia",
-    imagen: cardiologia
-  },{
-    title: "Cardiologia",
-    imagen: cardiologia
   }]
 
   return (

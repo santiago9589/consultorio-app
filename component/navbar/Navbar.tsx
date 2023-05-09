@@ -24,7 +24,7 @@ const Navbar = () => {
         },
         {
             route: "/quienessomos",
-            name: "quienes somos"
+            name: "quienes"
         },
         {
             route: "/contactus",
@@ -39,8 +39,9 @@ const Navbar = () => {
 
     return (
         <nav className="col-span-1 row-span-4 lg:col-span-6 lg:row-span-1 flex justify-between items-center flex-col lg:flex-row">
+            <img src={logo} alt="logo" className="lg:w-40 lg:h-full w-full h-32 "/>
             <h1 className="p-2 lg:text-2xl md:text-xl w-full text-center ">MEDICAL CLINICAL GROUP S.A</h1>
-            <section className="flex lg:space-x-12 space-y-4 lg:space-y-0 p-2 box-border flex-col lg:flex-row ">
+            <section className="flex lg:space-x-12 space-y-4 lg:space-y-0 p-2 box-border flex-col lg:flex-row items-center">
                 {
                     navbarLinks.map((element) => {
                         return (
@@ -53,7 +54,7 @@ const Navbar = () => {
                     })
                 }
             </section>
-            <img src={logo} alt="logo" className="lg:w-40 lg:h-full w-full h-32 " />
+            
         </nav>
     )
 }
